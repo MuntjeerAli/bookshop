@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap');
+
+:root{
+    --primary-color: #f3ac7c;
+    --light-pink: #d4bebe;
+    --metal-green: #357266;
+    --white: white;
+
+}
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Crimson Pro', serif
+}
+.navbar{
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    font-weight: 600;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.container{
+    height: 85vh;
+    width: 100%;
+    background: url(../images/book-image.png) center no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+.quote {
+    /* background-color: var(--primary-color); */
+    position: absolute;
+    margin-right: 2rem;
+    right: 0px;
+    top: 200px;
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;
+    line-height: 2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #0B0033;
+    height: 13rem;
+}
+
+.para{
+    padding: 1rem;
+    color: white;
+}
+
+.btn-shop{
+    height: 2rem;
+    width: 10rem;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    text-transform: uppercase;
+    border-color: white;
+}
+
+.btn-shop::before,
+.btn-shop::after{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border: inherit;
+    transition: 0.5s ease;
+    color: var(--primary-color);
+}
+
+.btn-shop::before{
+    left: -15px;
+    top: -15px;
+    border-width: 3px 0 0 3px;
+}
+
+.btn-shop::after{
+    right: -15px;
+    bottom: -15px;
+    border-width: 0 3px 3px 0;
+    color: var(--primary-color);
+}
+
+.btn-shop:hover::after,
+.btn-shop:hover::before{
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
